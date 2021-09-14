@@ -1,0 +1,38 @@
+n: 5
+n_auto_tuning: false # this param may take much time to compute...
+
+#init_config_check_algorithm: 
+#this parameter is used to delete unnecessary(unrelated) circles in the initial map
+#inrect: check whether all circles are within the rectangle defined by init and goal points.
+#online: check whether all cicrcles are crossed with the line defined by init and goal points.
+#none: disable this config_check. all circles are preserved in the optim phase.
+init_config_check_algorithm: none
+
+#disp_type: off , Iter
+disp_type: Iter #Iter
+error_tr: 1e-15
+
+avoid_circles: true
+avoid_walls: true
+n_discretization: 50
+ 
+
+#position of obstacles (circles)
+A: [0, 0];  # point of A
+B: [9, 9];  # point of B
+
+#circle position
+random_circle_generate: false
+random_circle_num: 2
+random_circle_max_rad: 1.5
+random_circle_min_rad: 0.3
+
+
+C0: [[1,1]; [2.5, 5.5]; [8, 7]; [8, 4.5];]; # center of the circle
+R0: [0.5 1.0 1.2 1.0]; # radisu of circles
+C:
+R:
+
+#Walls with rectangle
+#[left_bottom_x, left_bottom_y, h, w]
+Rect: [[4,0,2,4]; [4,6,2,4];]; 
